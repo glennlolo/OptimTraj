@@ -1,45 +1,46 @@
-function problem = inputValidation(problem)
+function problemOut = inputValidation(problemIn)
 %
 % This function runs through the problem struct and sets any missing fields
 % to the default value. If a mandatory field is missing, then it throws an
 % error.
 %
 % INPUTS:
-%   problem = a partially completed problem struct
+%   problemIn = a partially completed problem struct
 %
 % OUTPUTS:
-%   problem = a complete problem struct, with validated fields
+%   problemOut = a complete problem struct, with validated fields
 %
 
+problemOut = problemIn;
 
 %%%% Check the function handles:
 
-if ~isfield(problem,'func')
+if ~isfield(problemIn,'func')
     error('Field ''func'' cannot be ommitted from ''problem''');
 else
-    if ~isfield(problem.func,'dynamics')
+    if ~isfield(problemIn.func,'dynamics')
         error('Field ''dynamics'' cannot be ommitted from ''problem.func'''); end
-    if ~isfield(problem.func,'pathObj'), problem.func.pathObj = []; end
-    if ~isfield(problem.func,'bndObj'), problem.func.bndObj = []; end
-    if ~isfield(problem.func,'pathCst'), problem.func.pathCst = []; end
-    if ~isfield(problem.func,'bndCst'), problem.func.bndCst = []; end
+    if ~isfield(problemIn.func,'pathObj'), problemOut.func.pathObj = []; end
+    if ~isfield(problemIn.func,'bndObj'), problemOut.func.bndObj = []; end
+    if ~isfield(problemIn.func,'pathCst'), problemOut.func.pathCst = []; end
+    if ~isfield(problemIn.func,'bndCst'), problemOut.func.bndCst = []; end
 end
 
 %%%% Check the initial guess (also compute nState and nControl):
-if ~isfield(problem, 'guess')
+if ~isfield(problemIn, 'guess')
     error('Field ''guess'' cannot be ommitted from ''problem''');
 else
-    if ~isfield(problem.guess,'time')
+    if ~isfield(problemIn.guess,'time')
         error('Field ''time'' cannot be ommitted from ''problem.guess'''); end
-    if ~isfield(problem.guess, 'state')
+    if ~isfield(problemIn.guess, 'state')
         error('Field ''state'' cannot be ommitted from ''problem.guess'''); end
-    if ~isfield(problem.guess, 'control')
+    if ~isfield(problemIn.guess, 'control')
         error('Field ''control'' cannot be ommitted from ''problem.guess'''); end
     
     % Compute the size of the time, state, and control based on guess
-    [checkOne, nTime] = size(problem.guess.time);
-    [nState, checkTimeState] = size(problem.guess.state);
-    [nControl, checkTimeControl] = size(problem.guess.control);
+    [checkOne, nTime] = size(problemIn.guess.time);
+    [nState, checkTimeState] = size(problemIn.guess.state);
+    [nControl, checkTimeControl] = size(problemIn.guess.control);
     
     if nTime < 2 || checkOne ~= 1
         error('guess.time must have dimensions of [1, nTime], where nTime > 1');
@@ -55,44 +56,44 @@ else
 end
 
 %%%% Check the problem bounds:
-if ~isfield(problem,'bounds')
-    problem.bounds.initialTime = [];
-    problem.bounds.finalTime = [];
-    problem.bounds.state = [];
-    problem.bounds.initialState = [];
-    problem.bounds.finalState = [];
-    problem.bounds.control = [];
+if ~isfield(problemIn,'bounds')
+    problemOut.bounds.initialTime = [];
+    problemOut.bounds.finalTime = [];
+    problemOut.bounds.state = [];
+    problemOut.bounds.initialState = [];
+    problemOut.bounds.finalState = [];
+    problemOut.bounds.control = [];
 else
     
-    if ~isfield(problem.bounds,'initialTime')
-        problem.bounds.initialTime = []; end
-    problem.bounds.initialTime = ...
-        checkLowUpp(problem.bounds.initialTime,1,1,'initialTime');
+    if ~isfield(problemIn.bounds,'initialTime')
+        problemOut.bounds.initialTime = []; end
+    problemOut.bounds.initialTime = ...
+        checkLowUpp(problemOut.bounds.initialTime,1,1,'initialTime');
     
-    if ~isfield(problem.bounds,'finalTime')
-        problem.bounds.finalTime = []; end
-    problem.bounds.finalTime = ...
-        checkLowUpp(problem.bounds.finalTime,1,1,'finalTime');
+    if ~isfield(problemIn.bounds,'finalTime')
+        problemOut.bounds.finalTime = []; end
+    problemOut.bounds.finalTime = ...
+        checkLowUpp(problemOut.bounds.finalTime,1,1,'finalTime');
     
-    if ~isfield(problem.bounds,'state')
-        problem.bounds.state = []; end
-    problem.bounds.state = ...
-        checkLowUpp(problem.bounds.state,nState,1,'state');
+    if ~isfield(problemIn.bounds,'state')
+        problemOut.bounds.state = []; end
+    problemOut.bounds.state = ...
+        checkLowUpp(problemOut.bounds.state,nState,1,'state');
     
-    if ~isfield(problem.bounds,'initialState')
-        problem.bounds.initialState = []; end
-    problem.bounds.initialState = ...
-        checkLowUpp(problem.bounds.initialState,nState,1,'initialState');
+    if ~isfield(problemIn.bounds,'initialState')
+        problemOut.bounds.initialState = []; end
+    problemOut.bounds.initialState = ...
+        checkLowUpp(problemOut.bounds.initialState,nState,1,'initialState');
     
-    if ~isfield(problem.bounds,'finalState')
-        problem.bounds.finalState = []; end
-    problem.bounds.finalState = ...
-        checkLowUpp(problem.bounds.finalState,nState,1,'finalState');
+    if ~isfield(problemIn.bounds,'finalState')
+        problemOut.bounds.finalState = []; end
+    problemOut.bounds.finalState = ...
+        checkLowUpp(problemOut.bounds.finalState,nState,1,'finalState');
     
-    if ~isfield(problem.bounds,'control')
-        problem.bounds.control = []; end
-    problem.bounds.control = ...
-        checkLowUpp(problem.bounds.control,nControl,1,'control');
+    if ~isfield(problemIn.bounds,'control')
+        problemOut.bounds.control = []; end
+    problemOut.bounds.control = ...
+        checkLowUpp(problemOut.bounds.control,nControl,1,'control');
     
 end
 

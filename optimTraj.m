@@ -160,7 +160,7 @@ problem = getDefaultOptions(problem); % Complete options struct
 
 % Loop over the options struct to solve the problem
 nIter = length(problem.options);
-soln(nIter) = struct('grid',[],'interp',[],'info',[],'problem',[]); 
+soln = repmat(struct('grid',[],'interp',[],'info',[],'problem',[]),1,nIter); 
 P = problem;  %Temp variable for passing on each iteration
 for iter=1:nIter
     P.options = problem.options(iter);

@@ -57,9 +57,9 @@ end
 % Compute the parameters for the ORTHogonal polynomial, in this case the
 % Chebyshev polynomial roots, quadrature weights, interpolation weights,
 % and the differentiation matrix.
-try
+if 2 == exist("chebpts","file")
     [orth.xx, orth.ww, orth.vv] = chebpts(nColPts);
-catch ME
+else
     error('Missing dependency:  chebfun  (http://www.chebfun.org/)  ');
 end
 orth.D = getDifferentiationMatrix(orth.xx,orth.vv);

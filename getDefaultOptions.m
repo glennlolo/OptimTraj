@@ -1,51 +1,59 @@
-function problem = getDefaultOptions(problem)
-% problem = getDefaultOptions(problem)
+function problemOut = getDefaultOptions(problemIn)
+% problemOut = getDefaultOptions(problemIn)
 %
 % This function fills in any blank entries in the problem.options struct.
 % It is designed to be called from inside of optimTraj.m, and not by the
 % user.
 %
 
+problemOut.func = problemIn.func;
+problemOut.bounds = problemIn.bounds;
+problemOut.guess = problemIn.guess;
+
+% Figure out basic problem size:
+nState = size(problemIn.guess.state,1);
+nControl = size(problemIn.guess.control,1);
+
 %%%% Top-level default options:
 OPT.method = 'trapezoid';
 OPT.verbose = 2;
 OPT.defaultAccuracy = 'medium';
+OPT.nlpOpt = optimset(...
+                'Display','iter',...
+                'TolFun',1e-6,...
+                'MaxIter',400,...
+                'MaxFunEvals',5e4*(nState+nControl));
+OPT.trapezoid = defaults_trapezoid('medium');
+OPT.hermiteSimpson = defaults_hermiteSimpson('medium');
+OPT.chebyshev = defaults_chebyshev('medium');
+OPT.multiCheb = defaults_multiCheb('medium');
+OPT.rungeKutta = defaults_rungeKutta('medium');
+OPT.gpops = defaults_gpops('medium');
 
 
 %%%% Basic setup
 
 % ensure that options is not empty
-if ~isfield(problem,'options')
-    problem.options.method = OPT.method;
+if ~isfield(problemIn,'options')
+    problemOut.options.method = OPT.method;
 end
-opt = problem.options;
-
-% Loop over each options struct and fill in top-level options
-for i=1:length(opt)
-    if ~isfield(opt(i),'method')
-        opt(i).method = OPT.method;
-    elseif isempty(opt(i).method)
-        opt(i).method = OPT.method;
-    end
-    if ~isfield(opt(i),'verbose')
-        opt(i).verbose = OPT.verbose;
-    elseif isempty(opt(i).verbose)
-        opt(i).verbose = OPT.verbose;
-    end
-    if ~isfield(opt(i),'defaultAccuracy')
-        opt(i).defaultAccuracy = OPT.defaultAccuracy;
-    elseif isempty(opt(i).defaultAccuracy)
-        opt(i).defaultAccuracy = OPT.defaultAccuracy;
-    end
-end
-
-% Figure out basic problem size:
-nState = size(problem.guess.state,1);
-nControl = size(problem.guess.control,1);
+problemOut.options = repmat(OPT,1,length(problemIn.options));
 
 % Loop over opt and fill in nlpOpt struct:
-for i=1:length(opt)
-    switch opt(i).verbose
+for i=1:length(problemIn.options)
+    if ~isfield(problemIn.options(i),'verbose') || isempty(problemIn.options(i).verbose)
+        verbose = OPT.verbose;
+    else
+        verbose = problemIn.options(i).verbose;
+    end
+    problemOut.options(i).verbose = verbose;
+    if ~isfield(problemIn.options(i),'defaultAccuracy') || isempty(problemIn.options(i).defaultAccuracy)
+        defaultAccuracy = OPT.defaultAccuracy;
+    else
+        defaultAccuracy = problemIn.options(i).defaultAccuracy;
+    end
+    problemOut.options(i).defaultAccuracy = defaultAccuracy;
+    switch verbose
         case 0
             NLP_display = 'notify';
         case 1
@@ -57,21 +65,21 @@ for i=1:length(opt)
         otherwise
             error('Invalid value for options.verbose');
     end
-    switch opt(i).defaultAccuracy
+    switch defaultAccuracy
         case 'low'
-            OPT.nlpOpt = optimset(...
+            problemOut.options(i).nlpOpt = optimset(...
                 'Display',NLP_display,...
                 'TolFun',1e-4,...
                 'MaxIter',200,...
                 'MaxFunEvals',1e4*(nState+nControl));
         case 'medium'
-            OPT.nlpOpt = optimset(...
+            problemOut.options(i).nlpOpt = optimset(...
                 'Display',NLP_display,...
                 'TolFun',1e-6,...
                 'MaxIter',400,...
                 'MaxFunEvals',5e4*(nState+nControl));
         case 'high'
-            OPT.nlpOpt = optimset(...
+            problemOut.options(i).nlpOpt = optimset(...
                 'Display',NLP_display,...
                 'TolFun',1e-8,...
                 'MaxIter',800,...
@@ -79,32 +87,29 @@ for i=1:length(opt)
         otherwise
             error('Invalid value for options.defaultAccuracy')
     end
-    if isfield(opt(i),'nlpOpt')
-        if isstruct(opt(i).nlpOpt) && ~isempty(opt(i).nlpOpt)
-            names = fieldnames(opt(i).nlpOpt);
+    if isfield(problemIn.options(i),'nlpOpt')
+        if isstruct(problemIn.options(i).nlpOpt) && ~isempty(problemIn.options(i).nlpOpt)
+            names = fieldnames(problemIn.options(i).nlpOpt);
             for j=1:length(names)
                 if ~isfield(OPT.nlpOpt,names{j})
                     disp(['WARNING: options.nlpOpt.' names{j} ' is not a valid option']);
                 else
-                    OPT.nlpOpt.(names{j}) = opt(i).nlpOpt.(names{j});
+                    problemOut.options(i).nlpOpt.(names{j}) = problemIn.options(i).nlpOpt.(names{j});
                 end
             end
         end
     end
-    opt(i).nlpOpt = OPT.nlpOpt;
 end
 
 % Check ChebFun dependency:
 missingChebFun = false;
-for i=1:length(opt)
-if strcmp(opt(i).method,'chebyshev')
-try
-    chebpts(3);  %Test call to chebfun
-catch ME %#ok<NASGU>
-    missingChebFun = true;
-    opt(i).method = 'trapezoid';  %Force default method
-end
-end
+for i=1:length(problemIn.options(i))
+    if strcmp(problemIn.options(i).method,'chebyshev')
+        if ~isfile("chebpts.m")
+            missingChebFun = true;
+            problemOut.options(i).method = 'trapezoid';  %Force default method
+        end
+    end
 end
 if missingChebFun
    warning('''chebyshev'' method requires the Chebfun toolbox');
@@ -113,40 +118,52 @@ if missingChebFun
 end
 
 % Fill in method-specific paramters:
-for i=1:length(opt)
-    OPT_method = opt(i).method;
-    switch OPT_method
+for i=1:length(problemIn.options(i))
+    if ~isfield(problemIn.options(i),'method') || isempty(problemIn.options(i).method)
+        method = OPT.method;
+    else
+        method = problemIn.options(i).method;
+    end
+    if ~isfield(problemIn.options(i),'defaultAccuracy') || isempty(problemIn.options(i).defaultAccuracy)
+        defaultAccuracy = OPT.defaultAccuracy;
+    else
+        defaultAccuracy = problemIn.options(i).defaultAccuracy;
+    end
+    problemOut.options(i).method = method;
+    switch method
         case 'trapezoid'
-            OPT.trapezoid = defaults_trapezoid(opt(i).defaultAccuracy);
+            problemOut.options(i).trapezoid = defaults_trapezoid(defaultAccuracy);
         case 'hermiteSimpson'
-            OPT.hermiteSimpson = defaults_hermiteSimpson(opt(i).defaultAccuracy);
+            problemOut.options(i).hermiteSimpson = defaults_hermiteSimpson(defaultAccuracy);
         case 'chebyshev'
-            OPT.chebyshev = defaults_chebyshev(opt(i).defaultAccuracy);
+            problemOut.options(i).chebyshev = defaults_chebyshev(defaultAccuracy);
         case 'multiCheb'
-            OPT.multiCheb = defaults_multiCheb(opt(i).defaultAccuracy);
+            problemOut.options(i).multiCheb = defaults_multiCheb(defaultAccuracy);
         case 'rungeKutta'
-            OPT.rungeKutta = defaults_rungeKutta(opt(i).defaultAccuracy);
+            problemOut.options(i).rungeKutta = defaults_rungeKutta(defaultAccuracy);
         case 'gpops'
-            OPT.gpops = defaults_gpops(opt(i).defaultAccuracy);
+            problemOut.options(i).gpops = defaults_gpops(defaultAccuracy);
         otherwise
             error('Invalid value for options.method');
     end
-    if isfield(opt(i),OPT_method)
-        if isstruct(opt(i).(OPT_method)) && ~isempty(opt(i).(OPT_method))
-            names = fieldnames(opt(i).(OPT_method));
-            for j=1:length(names)
-                if ~isfield(OPT.(OPT_method),names{j})
-                    disp(['WARNING: options.' OPT_method '.' names{j} ' is not a valid option']);
-                else
-                    OPT.(OPT_method).(names{j}) = opt(i).(OPT_method).(names{j});
+    if isfield(problemIn.options(i),method)
+        fields = fieldnames(problemIn.options(i));
+        for j=1:length(fields)
+            if isstruct(problemIn.options(i).(fields{j})) && ~isempty(problemIn.options(i).(fields{j}))
+                names = fieldnames(problemIn.options(i).(fields{j}));
+                for k=1:length(names)
+                    if ~isfield(problemIn.options(i).(fields{j}),names{k})
+                        disp(['WARNING: options.' fields{j} '.' names{k} ' is not a valid option']);
+                    else
+                        problemOut.options(i).(fields{j}).(names{k}) = problemIn.options(i).(fields{j}).(names{k});
+                    end
                 end
+            elseif ~isempty(problemIn.options(i).(fields{j}))
+                problemOut.options(i).(fields{j}) = problemIn.options(i).(fields{j});
             end
         end
     end
-    opt(i).(OPT_method) = OPT.(OPT_method);
 end
-
-problem.options = opt;
 end
 
 

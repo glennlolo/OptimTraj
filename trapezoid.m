@@ -1,5 +1,5 @@
-function soln = trapezoid(problem)
-% soln = trapezoid(problem)
+function soln = trapezoid(problemIn)
+% soln = trapezoid(problemIn)
 %
 % This function transcribes a trajectory optimization problem using the
 % trapezoid method for enforcing the dynamics. It can be found in chapter
@@ -54,11 +54,12 @@ function soln = trapezoid(problem)
 %   If analytic gradients are used, then the sparsity pattern is returned
 %   in the struct: soln.info.sparsityPattern. View it using spy().
 %
+problem = problemIn;
 
 % Print out some solver info if desired:
-nGrid = problem.options.trapezoid.nGrid;
-if problem.options.verbose > 0
-    fprintf('  -> Transcription via trapezoid method, nGrid = %d\n',nGrid);
+nGrid = problemIn.options.trapezoid.nGrid;
+if problemIn.options.verbose > 0
+    fprintf('  -> Transcription via trapezoid method, nGrid = %d\n',int32(nGrid));
 end
 
 %%%% Method-specific details to pass along to solver:

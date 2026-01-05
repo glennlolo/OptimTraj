@@ -23,8 +23,16 @@ Opt = problem.options;
 
 nGrid = length(F.weights);
 
-flagGradObj = strcmp(Opt.nlpOpt.GradObj,'on');
-flagGradCst = strcmp(Opt.nlpOpt.GradConstr,'on');
+if isfield(Opt.nlpOpt,'GradObj')
+    flagGradObj = strcmp(Opt.nlpOpt.GradObj,'on');
+else
+    flagGradObj = false;
+end
+if isfield(Opt.nlpOpt,'GradConstr')
+    flagGradCst = strcmp(Opt.nlpOpt.GradConstr,'on');
+else
+    flagGradCst = false;
+end
 
 % Print out notice about analytic gradients
 if Opt.verbose > 0
@@ -38,10 +46,12 @@ if Opt.verbose > 0
 end
 
 % Interpolate the guess at the grid-points for transcription:
-guess.tSpan = G.time([1,end]);
-guess.time = linspace(guess.tSpan(1), guess.tSpan(2), nGrid);
-guess.state = interp1(G.time', G.state', guess.time')';
-guess.control = interp1(G.time', G.control', guess.time')';
+tSpan = G.time([1,end]);
+time = linspace(tSpan(1), tSpan(2), nGrid);
+guess.tSpan = tSpan;
+guess.time = time;
+guess.state = interp1(G.time', G.state', time')';
+guess.control = interp1(G.time', G.control', time')';
 
 [zGuess, pack] = packDecVar(guess.time, guess.state, guess.control);
 
@@ -81,18 +91,27 @@ else
         myConstraint(z, pack, F.dynamics, F.pathCst, F.bndCst, F.defectCst) ); %Numerical gradients
 end
 
+%%%% Option structure creation
+opts = optimoptions('fmincon');
+fields = fieldnames(Opt.nlpOpt);
+for i = 1:length(fields)
+    if ~isempty(Opt.nlpOpt.(fields{i}))
+        opts = optimoptions(opts,fields{i},Opt.nlpOpt.(fields{i}));
+    end
+end
 
 P.x0 = zGuess;
 P.lb = zLow;
 P.ub = zUpp;
 P.Aineq = []; P.bineq = [];
 P.Aeq = []; P.beq = [];
-P.options = Opt.nlpOpt;
+P.options = opts;
 P.solver = 'fmincon';
 
 %%%% Call fmincon to solve the non-linear program (NLP)
 tic;
-[zSoln, objVal,exitFlag,output] = fmincon(P);
+[zSoln, objVal,exitFlag,output] = fmincon(P.objective,P.x0,P.Aineq,P.bineq,...
+    P.Aeq,P.beq,P.lb,P.ub,P.nonlcon,P.options);
 [tSoln,xSoln,uSoln] = unPackDecVar(zSoln,pack);
 nlpTime = toc;
 
