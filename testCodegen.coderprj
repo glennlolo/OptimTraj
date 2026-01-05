@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<coderProject client="MatlabCoder" containerVersion="1" createdBy="R2025b" modifiedBy="R2025b">
+  <layers>
+    <layer id="core" version="R2025a">
+      <parts>
+        <part role="testRepository">
+          <MF0 packageUris="http://schema.mathworks.com/mf0/coderapp_config_datamodel/R2021a.001 http://schema.mathworks.com/mf0/coderapp_core_proj_dm/R2025a http://schema.mathworks.com/mf0/coderapp_core_rt_dm/R2022b http://schema.mathworks.com/mf0/coderapp_form_datamodel/R2020a http://schema.mathworks.com/mf0/coderapp_matlabcoder_proj_dm/R2025a http://schema.mathworks.com/mf0/coderapp_matlabcoder_rt_dm/R2022b http://schema.mathworks.com/mf0/coderapp_types_project_datamodel/R2025a http://schema.mathworks.com/mf0/coderapp_types_runtime_datamodel/R2022b http://schema.mathworks.com/mf0/coderapp_utils_datamodel/R2020a" version="1.1">
+            <coderapp.internal.core.mfz.TestRepositoryState id="1" type="coderapp.internal.core.mfz.TestRepositoryState">
+              <Tests type="coderapp.internal.core.mfz.TestSpec">
+                <Type>FILE</Type>
+                <Value>C:\Users\hugob\Documents\Pokibot\OptimTraj\demo\toyCar\MAIN.m</Value>
+              </Tests>
+            </coderapp.internal.core.mfz.TestRepositoryState>
+          </MF0>
+        </part>
+      </parts>
+    </layer>
+    <layer id="interface" version="R2025a">
+      <parts>
+        <part role="mainInterface">
+          <MF0 packageUris="http://schema.mathworks.com/mf0/coderapp_config_datamodel/R2021a.001 http://schema.mathworks.com/mf0/coderapp_core_proj_dm/R2025a http://schema.mathworks.com/mf0/coderapp_core_rt_dm/R2022b http://schema.mathworks.com/mf0/coderapp_form_datamodel/R2020a http://schema.mathworks.com/mf0/coderapp_matlabcoder_proj_dm/R2025a http://schema.mathworks.com/mf0/coderapp_matlabcoder_rt_dm/R2022b http://schema.mathworks.com/mf0/coderapp_types_project_datamodel/R2025a http://schema.mathworks.com/mf0/coderapp_types_runtime_datamodel/R2022b http://schema.mathworks.com/mf0/coderapp_utils_datamodel/R2020a" version="1.1">
+            <coderapp.internal.interface.project.Interface id="1" type="coderapp.internal.interface.project.Interface">
+              <EntryPoints id="2" type="coderapp.internal.interface.project.EntryPointFunction">
+                <Signatures id="3" type="coderapp.internal.interface.project.FunctionSignature">
+                  <Inputs id="4" type="coderapp.internal.interface.project.Input">
+                    <Name>xBnd</Name>
+                    <Type id="5" type="coderapp.internal.codertype.PrimitiveType"/>
+                  </Inputs>
+                  <Inputs id="6" type="coderapp.internal.interface.project.Input">
+                    <Name>yBnd</Name>
+                    <Type id="5" type="coderapp.internal.codertype.PrimitiveType"/>
+                  </Inputs>
+                  <Inputs id="7" type="coderapp.internal.interface.project.Input">
+                    <Name>startPoint</Name>
+                    <Type id="8" type="coderapp.internal.codertype.PrimitiveType"/>
+                  </Inputs>
+                  <Inputs id="9" type="coderapp.internal.interface.project.Input">
+                    <Name>finishPoint</Name>
+                    <Type id="8" type="coderapp.internal.codertype.PrimitiveType"/>
+                  </Inputs>
+                  <Inputs id="10" type="coderapp.internal.interface.project.Input">
+                    <Name>uMax</Name>
+                    <Type id="11" type="coderapp.internal.codertype.PrimitiveType"/>
+                  </Inputs>
+                  <NumOutputs>1</NumOutputs>
+                </Signatures>
+                <File type="coderapp.internal.util.mfz.FileSpec">
+                  <Path>demo/toyCar/toyCar_codegen.m</Path>
+                </File>
+                <Name>toyCar_codegen</Name>
+              </EntryPoints>
+              <SizeConstraints id="12" type="coderapp.internal.interface.project.SizeConstraints">
+                <Value type="coderapp.internal.interface.project.SizeConstraintsValue"/>
+              </SizeConstraints>
+              <Types id="13" type="coderapp.internal.codertype.TypeStore">
+                <Types id="5" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
+                </Types>
+                <Types id="8" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="11" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="14" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="15" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="16" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
+                </Types>
+                <Types id="17" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="18" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="19" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
+                </Types>
+                <Types id="20" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="21" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="22" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
+                </Types>
+                <Types id="23" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="24" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="25" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
+                </Types>
+                <Types id="26" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="27" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="28" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
+                </Types>
+                <Types id="29" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="30" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="31" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
+                </Types>
+              </Types>
+            </coderapp.internal.interface.project.Interface>
+          </MF0>
+        </part>
+      </parts>
+    </layer>
+    <layer id="matlabCoder" version="R2025a">
+      <parts>
+        <part role="matlabCoder">
+          <MF0 packageUris="http://schema.mathworks.com/mf0/coderapp_config_datamodel/R2021a.001 http://schema.mathworks.com/mf0/coderapp_core_proj_dm/R2025a http://schema.mathworks.com/mf0/coderapp_core_rt_dm/R2022b http://schema.mathworks.com/mf0/coderapp_form_datamodel/R2020a http://schema.mathworks.com/mf0/coderapp_matlabcoder_proj_dm/R2025a http://schema.mathworks.com/mf0/coderapp_matlabcoder_rt_dm/R2022b http://schema.mathworks.com/mf0/coderapp_types_project_datamodel/R2025a http://schema.mathworks.com/mf0/coderapp_types_runtime_datamodel/R2022b http://schema.mathworks.com/mf0/coderapp_utils_datamodel/R2020a" version="1.1">
+            <coderapp.internal.mlc.mfz.MatlabCoderProjectState id="1" type="coderapp.internal.mlc.mfz.MatlabCoderProjectState">
+              <Activity id="2" type="coderapp.internal.mlc.mfz.MainBuildActivity">
+                <Compile>NOT_PLANNED</Compile>
+                <Generate>FAIL</Generate>
+                <TargetHardware>MATLAB Host Computer</TargetHardware>
+                <TargetLanguage>C</TargetLanguage>
+                <WorkflowTarget>LIB</WorkflowTarget>
+                <Result id="3" type="coderapp.internal.mlc.mfz.MatlabCoderCodegenResult"/>
+              </Activity>
+              <MainBuildResult id="3" type="coderapp.internal.mlc.mfz.MatlabCoderCodegenResult">
+                <WorkflowTarget>LIB</WorkflowTarget>
+                <LogDirectory>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\toyCar_codegen</LogDirectory>
+                <MainReport id="4" type="coderapp.internal.build.mfz.CodegenArtifact"/>
+                <Artifacts id="4" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <SubType>CODEGEN_REPORT</SubType>
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\toyCar_codegen\html\report.mldatx</Path>
+                  </File>
+                  <Type>CODEGEN_REPORT</Type>
+                </Artifacts>
+                <BuildFolder type="coderapp.internal.util.mfz.FileSpec"/>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\demo\toyCar\toyCar_codegen.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>2339</End>
+                      <Start>2322</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:builtins:ErrorLimitReached</Identifier>
+                  <Text>Error limit reached. Suppressing further error messages.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\optimTraj.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>6878</End>
+                      <Start>6867</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
+                  <Text>Function call failed.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\optimTraj.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>6952</End>
+                      <Start>6936</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
+                  <Text>Function call failed.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\optimTraj.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>7016</End>
+                      <Start>7005</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
+                  <Text>Function call failed.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\optimTraj.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>7080</End>
+                      <Start>7069</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
+                  <Text>Function call failed.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\optimTraj.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>7146</End>
+                      <Start>7134</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:builtins:ErrorLimitReached</Identifier>
+                  <Text>Error limit reached. Suppressing further error messages.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\trapezoid.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>2820</End>
+                      <Start>2795</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
+                  <Text>Function call failed.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\directCollocation.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>3121</End>
+                      <Start>3118</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:builtins:SizeMismatch</Identifier>
+                  <Text>Arrays have incompatible sizes ([1 x 5] and [1 x :?]).</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\hermiteSimpson.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>2553</End>
+                      <Start>2429</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:toolbox:xprintfFmtTypeMismatchSigned</Identifier>
+                  <Text>An input argument with type 'double' is inconsistent with the conversion character 'd' in the 'formatSpec'. For code generation, the type of this input argument must be 'int8', 'int16', 'int32', or 'int64'.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\hermiteSimpson.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>2553</End>
+                      <Start>2429</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
+                  <Text>Function call failed.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\hermiteSimpson.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>2685</End>
+                      <Start>2674</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:builtins:StructFieldUndefinedLocked</Identifier>
+                  <Text>Invalid structure field 'weights'. Code generation does not support the addition of new fields after a structure has been read or used.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\chebyshev.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>1805</End>
+                      <Start>1763</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:toolbox:xprintfFmtTypeMismatchSigned</Identifier>
+                  <Text>An input argument with type 'double' is inconsistent with the conversion character 'd' in the 'formatSpec'. For code generation, the type of this input argument must be 'int8', 'int16', 'int32', or 'int64'.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\chebyshev.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>1805</End>
+                      <Start>1763</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
+                  <Text>Function call failed.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\chebyshev.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>2028</End>
+                      <Start>2006</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:builtins:ExistFileMode</Identifier>
+                  <Text>Code generation does not support calling exist with 'file' as the search type. Consider using isfile.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\chebyshev.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>2028</End>
+                      <Start>2006</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
+                  <Text>Function call failed.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\chebyshev.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>2079</End>
+                      <Start>2034</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:builtins:UndefinedFunctionOrVariable</Identifier>
+                  <Text>Undefined function or variable chebpts.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\chebyshev.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>2354</End>
+                      <Start>2327</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:builtins:UndefinedFunctionOrVariable</Identifier>
+                  <Text>Undefined function or variable chebpts.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\multiCheb.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>2894</End>
+                      <Start>2854</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
+                  <Text>Function call failed.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\multiCheb.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>12621</End>
+                      <Start>12621</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:builtins:FunctionOutputNotAlwaysAssigned</Identifier>
+                  <Text>Output argument 'w' is undefined on some execution paths. For code generation, all variables must be fully defined before use.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\rungeKutta.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>1736</End>
+                      <Start>1691</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:toolbox:xprintfFmtTypeMismatchSigned</Identifier>
+                  <Text>An input argument with type 'double' is inconsistent with the conversion character 'd' in the 'formatSpec'. For code generation, the type of this input argument must be 'int8', 'int16', 'int32', or 'int64'.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\rungeKutta.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>1736</End>
+                      <Start>1691</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
+                  <Text>Function call failed.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\rungeKutta.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>1788</End>
+                      <Start>1743</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:toolbox:xprintfFmtTypeMismatchSigned</Identifier>
+                  <Text>An input argument with type 'double' is inconsistent with the conversion character 'd' in the 'formatSpec'. For code generation, the type of this input argument must be 'int8', 'int16', 'int32', or 'int64'.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\rungeKutta.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>1788</End>
+                      <Start>1743</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
+                  <Text>Function call failed.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\rungeKutta.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>1907</End>
+                      <Start>1903</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:builtins:StructFieldUndefinedLocked</Identifier>
+                  <Text>Invalid structure field 'tState'. Code generation does not support the addition of new fields after a structure has been read or used.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\rungeKutta.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>2460</End>
+                      <Start>2435</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:builtins:ErrorLimitReached</Identifier>
+                  <Text>Error limit reached. Suppressing further error messages.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\rungeKutta.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range">
+                      <End>7371</End>
+                      <Start>7368</Start>
+                    </Range>
+                  </FileRange>
+                  <Identifier>Coder:builtins:StructFieldUndefinedLocked</Identifier>
+                  <Text>Invalid structure field 'nSubStep'. Code generation does not support the addition of new fields after a structure has been read or used.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Timestamp>2026-01-05T19:54:38</Timestamp>
+              </MainBuildResult>
+            </coderapp.internal.mlc.mfz.MatlabCoderProjectState>
+          </MF0>
+        </part>
+        <part role="standaloneConfig">
+          <MF0 packageUris="http://schema.mathworks.com/mf0/coderapp_config_datamodel/R2021a.001" version="1.1">
+            <coderapp.internal.ext.ConfigStore id="1" type="coderapp.internal.ext.ConfigStore">
+              <Values id="2" type="coderapp.internal.ext.ConfigEntry">
+                <Key>dynamicMemoryAllocationFixedSize</Key>
+                <Data id="3" type="coderapp.internal.config.data.BooleanParamData">
+                  <Value>true</Value>
+                  <Help type="coderapp.internal.util.DocRef"/>
+                </Data>
+              </Values>
+              <Values id="4" type="coderapp.internal.ext.ConfigEntry">
+                <Key>preserveArrayDimensions</Key>
+                <Data id="5" type="coderapp.internal.config.data.BooleanParamData">
+                  <Value>true</Value>
+                  <Help type="coderapp.internal.util.DocRef"/>
+                </Data>
+              </Values>
+            </coderapp.internal.ext.ConfigStore>
+          </MF0>
+        </part>
+        <part role="mexConfig">
+          <MF0 packageUris="http://schema.mathworks.com/mf0/coderapp_config_datamodel/R2021a.001" version="1.1">
+            <coderapp.internal.ext.ConfigStore id="1" type="coderapp.internal.ext.ConfigStore"/>
+          </MF0>
+        </part>
+      </parts>
+    </layer>
+  </layers>
+</coderProject>
