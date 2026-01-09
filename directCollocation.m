@@ -91,14 +91,13 @@ else
         myConstraint(z, pack, F.dynamics, F.pathCst, F.bndCst, F.defectCst) ); %Numerical gradients
 end
 
-%%%% Option structure creation
-opts = optimoptions('fmincon');
-fields = fieldnames(Opt.nlpOpt);
-for i = 1:length(fields)
-    if ~isempty(Opt.nlpOpt.(fields{i}))
-        opts = optimoptions(opts,fields{i},Opt.nlpOpt.(fields{i}));
-    end
-end
+% %%%% Option structure creation
+opts = optimoptions('fmincon',...
+        'Algorithm','sqp-legacy',...
+        'Display',string(Opt.nlpOpt.Display),...
+        'ConstraintTolerance',Opt.nlpOpt.TolFun,...
+        'MaxIterations',Opt.nlpOpt.MaxIter,...
+        'MaxFunctionEvaluations',Opt.nlpOpt.MaxFunEvals);
 
 P.x0 = zGuess;
 P.lb = zLow;
@@ -106,7 +105,6 @@ P.ub = zUpp;
 P.Aineq = []; P.bineq = [];
 P.Aeq = []; P.beq = [];
 P.options = opts;
-P.solver = 'fmincon';
 
 %%%% Call fmincon to solve the non-linear program (NLP)
 tic;

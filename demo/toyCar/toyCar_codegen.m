@@ -1,12 +1,14 @@
 function soln = toyCar_codegen(xBnd,yBnd,startPoint,finishPoint,uMax)
 
+waypoint = [3;3.5];
+
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 %                      Set up function handles                            %
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 
 problem.func.dynamics = @(t,x,u)( dynamics(x,u) );
 problem.func.pathObj = @(t,x,u)( objective(x,u) );
-problem.func.pathCst = @(t,x,u)( pathConst(t,x) );
+problem.func.pathCst = @(t,x,u)( pathConst(t,x,waypoint) );
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 %                 Set up bounds on state and control                      %
@@ -35,11 +37,13 @@ problem.bounds.control.upp = uMax;
 % Car travels at a speed of one, and drives in a straight line from start
 % to finish point.
 
-del = finishPoint - startPoint;  % vector from start to finish
-angle = atan2(del(2),del(1));
+del = finishPoint - waypoint;  % vector from start to finish
+mid = waypoint - startPoint;
+angle = atan2(del(1),del(2));
+angleMid = atan2(mid(1),mid(2));
 
-problem.guess.time = [0, norm(del)];
-problem.guess.state = [[startPoint; angle], [finishPoint; angle]];
+problem.guess.time = [0, norm(del)+norm(mid)];
+problem.guess.state = [[startPoint; angleMid],[finishPoint; angle]];
 problem.guess.control = [0,0];
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%

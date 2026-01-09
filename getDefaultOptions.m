@@ -19,7 +19,7 @@ OPT.method = 'trapezoid';
 OPT.verbose = 2;
 OPT.defaultAccuracy = 'medium';
 OPT.nlpOpt = optimset(...
-                'Display','iter',...
+                'Display',"iter",...
                 'TolFun',1e-6,...
                 'MaxIter',400,...
                 'MaxFunEvals',5e4*(nState+nControl));
@@ -55,13 +55,13 @@ for i=1:length(problemIn.options)
     problemOut.options(i).defaultAccuracy = defaultAccuracy;
     switch verbose
         case 0
-            NLP_display = 'notify';
+            NLP_display = "notify";
         case 1
-            NLP_display = 'final-detailed';
+            NLP_display = "final-detailed";
         case 2
-            NLP_display = 'iter';
+            NLP_display = "iter";
         case 3
-            NLP_display = 'iter-detailed';
+            NLP_display = "iter-detailed";
         otherwise
             error('Invalid value for options.verbose');
     end
