@@ -8,6 +8,10 @@
             <coderapp.internal.core.mfz.TestRepositoryState id="1" type="coderapp.internal.core.mfz.TestRepositoryState">
               <Tests type="coderapp.internal.core.mfz.TestSpec">
                 <Type>FILE</Type>
+                <Value>C:\Users\hugob\Documents\Pokibot\OptimTraj\demo\goddardRocket\MAIN.m</Value>
+              </Tests>
+              <Tests type="coderapp.internal.core.mfz.TestSpec">
+                <Type>FILE</Type>
                 <Value>C:\Users\hugob\Documents\Pokibot\OptimTraj\demo\toyCar\MAIN.m</Value>
               </Tests>
             </coderapp.internal.core.mfz.TestRepositoryState>
@@ -23,220 +27,217 @@
               <EntryPoints id="2" type="coderapp.internal.interface.project.EntryPointFunction">
                 <Signatures id="3" type="coderapp.internal.interface.project.FunctionSignature">
                   <Inputs id="4" type="coderapp.internal.interface.project.Input">
-                    <Name>xBnd</Name>
+                    <Name>mTotal</Name>
                     <Type id="5" type="coderapp.internal.codertype.PrimitiveType"/>
                   </Inputs>
                   <Inputs id="6" type="coderapp.internal.interface.project.Input">
-                    <Name>yBnd</Name>
+                    <Name>mEmpty</Name>
                     <Type id="5" type="coderapp.internal.codertype.PrimitiveType"/>
                   </Inputs>
                   <Inputs id="7" type="coderapp.internal.interface.project.Input">
-                    <Name>startPoint</Name>
-                    <Type id="8" type="coderapp.internal.codertype.PrimitiveType"/>
+                    <Name>Tmax</Name>
+                    <Type id="5" type="coderapp.internal.codertype.PrimitiveType"/>
                   </Inputs>
-                  <Inputs id="9" type="coderapp.internal.interface.project.Input">
-                    <Name>finishPoint</Name>
-                    <Type id="8" type="coderapp.internal.codertype.PrimitiveType"/>
-                  </Inputs>
-                  <Inputs id="10" type="coderapp.internal.interface.project.Input">
-                    <Name>uMax</Name>
-                    <Type id="11" type="coderapp.internal.codertype.PrimitiveType"/>
-                  </Inputs>
-                  <NumOutputs>1</NumOutputs>
+                  <NumOutputs>3</NumOutputs>
                 </Signatures>
                 <File type="coderapp.internal.util.mfz.FileSpec">
-                  <Path>demo/toyCar/toyCar_codegen.m</Path>
+                  <Path>demo/goddardRocket/rocket_codegen.m</Path>
                 </File>
-                <Name>toyCar_codegen</Name>
+                <Name>rocket_codegen</Name>
               </EntryPoints>
-              <SizeConstraints id="12" type="coderapp.internal.interface.project.SizeConstraints">
+              <SizeConstraints id="8" type="coderapp.internal.interface.project.SizeConstraints">
                 <Value type="coderapp.internal.interface.project.SizeConstraintsValue"/>
               </SizeConstraints>
-              <Types id="13" type="coderapp.internal.codertype.TypeStore">
-                <Types id="5" type="coderapp.internal.codertype.PrimitiveType">
+              <Types id="9" type="coderapp.internal.codertype.TypeStore">
+                <Types id="10" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
                   <Size type="coderapp.internal.codertype.Dimension"/>
                   <Size type="coderapp.internal.codertype.Dimension">
                     <Length>2</Length>
                   </Size>
-                </Types>
-                <Types id="8" type="coderapp.internal.codertype.PrimitiveType">
-                  <ClassName>double</ClassName>
-                  <Size type="coderapp.internal.codertype.Dimension">
-                    <Length>2</Length>
-                  </Size>
-                  <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="11" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
                   <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="12" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="13" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
                   <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="14" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
-                  <Size type="coderapp.internal.codertype.Dimension">
-                    <Length>2</Length>
-                  </Size>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
                   <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="15" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
                   <Size type="coderapp.internal.codertype.Dimension"/>
-                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
                 </Types>
                 <Types id="16" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
                   <Size type="coderapp.internal.codertype.Dimension"/>
-                  <Size type="coderapp.internal.codertype.Dimension">
-                    <Length>2</Length>
-                  </Size>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="17" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
-                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
                   <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="18" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
                   <Size type="coderapp.internal.codertype.Dimension">
                     <Length>2</Length>
                   </Size>
-                  <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="19" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
-                  <Size type="coderapp.internal.codertype.Dimension"/>
                   <Size type="coderapp.internal.codertype.Dimension">
                     <Length>2</Length>
                   </Size>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="20" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
-                  <Size type="coderapp.internal.codertype.Dimension">
-                    <Length>2</Length>
-                  </Size>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
                   <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="21" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
                   <Size type="coderapp.internal.codertype.Dimension"/>
-                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
                 </Types>
                 <Types id="22" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
                   <Size type="coderapp.internal.codertype.Dimension"/>
-                  <Size type="coderapp.internal.codertype.Dimension">
-                    <Length>2</Length>
-                  </Size>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="23" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
-                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
                   <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="24" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
                   <Size type="coderapp.internal.codertype.Dimension">
                     <Length>2</Length>
                   </Size>
-                  <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="25" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
                   <Size type="coderapp.internal.codertype.Dimension"/>
-                  <Size type="coderapp.internal.codertype.Dimension">
-                    <Length>2</Length>
-                  </Size>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="26" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
-                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
                   <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="27" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
                   <Size type="coderapp.internal.codertype.Dimension">
                     <Length>2</Length>
                   </Size>
-                  <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="28" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
                   <Size type="coderapp.internal.codertype.Dimension"/>
-                  <Size type="coderapp.internal.codertype.Dimension">
-                    <Length>2</Length>
-                  </Size>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="29" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
-                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
                   <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="30" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
                   <Size type="coderapp.internal.codertype.Dimension">
                     <Length>2</Length>
                   </Size>
-                  <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="31" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
                   <Size type="coderapp.internal.codertype.Dimension"/>
-                  <Size type="coderapp.internal.codertype.Dimension">
-                    <Length>2</Length>
-                  </Size>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="32" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
-                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
                   <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="33" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
                   <Size type="coderapp.internal.codertype.Dimension">
                     <Length>2</Length>
                   </Size>
-                  <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="34" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
                   <Size type="coderapp.internal.codertype.Dimension"/>
-                  <Size type="coderapp.internal.codertype.Dimension">
-                    <Length>2</Length>
-                  </Size>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="35" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
-                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
                   <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="36" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
                   <Size type="coderapp.internal.codertype.Dimension">
                     <Length>2</Length>
                   </Size>
-                  <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="37" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
-                  <Size type="coderapp.internal.codertype.Dimension"/>
                   <Size type="coderapp.internal.codertype.Dimension">
                     <Length>2</Length>
                   </Size>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="38" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
                   <Size type="coderapp.internal.codertype.Dimension">
                     <Length>2</Length>
                   </Size>
-                  <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="39" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
                   <Size type="coderapp.internal.codertype.Dimension"/>
-                  <Size type="coderapp.internal.codertype.Dimension">
-                    <Length>2</Length>
-                  </Size>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="40" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
@@ -245,22 +246,128 @@
                 </Types>
                 <Types id="41" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
-                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
                   <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
                 <Types id="42" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
+                </Types>
+                <Types id="43" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
                   <Size type="coderapp.internal.codertype.Dimension">
                     <Length>2</Length>
                   </Size>
                   <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
-                <Types id="43" type="coderapp.internal.codertype.PrimitiveType">
+                <Types id="44" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="45" type="coderapp.internal.codertype.PrimitiveType">
                   <ClassName>double</ClassName>
                   <Size type="coderapp.internal.codertype.Dimension"/>
                   <Size type="coderapp.internal.codertype.Dimension">
                     <Length>2</Length>
                   </Size>
+                </Types>
+                <Types id="46" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="47" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="48" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
+                </Types>
+                <Types id="49" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="50" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="51" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
+                </Types>
+                <Types id="52" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
+                </Types>
+                <Types id="53" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="54" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2</Length>
+                  </Size>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="5" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="55" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="56" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="57" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="58" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="59" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="60" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
                 </Types>
               </Types>
             </coderapp.internal.interface.project.Interface>
@@ -275,7 +382,7 @@
             <coderapp.internal.mlc.mfz.MatlabCoderProjectState id="1" type="coderapp.internal.mlc.mfz.MatlabCoderProjectState">
               <Activity id="2" type="coderapp.internal.mlc.mfz.MainBuildActivity">
                 <Compile>NOT_PLANNED</Compile>
-                <Generate>FAIL</Generate>
+                <Generate>SUCCESS</Generate>
                 <TargetHardware>MATLAB Host Computer</TargetHardware>
                 <TargetLanguage>C</TargetLanguage>
                 <WorkflowTarget>LIB</WorkflowTarget>
@@ -283,401 +390,1232 @@
               </Activity>
               <MainBuildResult id="3" type="coderapp.internal.mlc.mfz.MatlabCoderCodegenResult">
                 <WorkflowTarget>LIB</WorkflowTarget>
-                <LogDirectory>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\toyCar_codegen</LogDirectory>
+                <LogDirectory>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen</LogDirectory>
                 <MainReport id="4" type="coderapp.internal.build.mfz.CodegenArtifact"/>
                 <Artifacts id="4" type="coderapp.internal.build.mfz.CodegenArtifact">
                   <SubType>CODEGEN_REPORT</SubType>
                   <File type="coderapp.internal.util.mfz.FileSpec">
-                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\toyCar_codegen\html\report.mldatx</Path>
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\html\report.mldatx</Path>
                   </File>
                   <Type>CODEGEN_REPORT</Type>
+                </Artifacts>
+                <Artifacts id="5" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Program Files\MATLAB\R2025b\extern\include\tmwtypes.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="6" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\BFGSUpdate.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="7" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\BFGSUpdate.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="8" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\CoderTimeAPI.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="9" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\CoderTimeAPI.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="10" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\PresolveWorkingSet.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="11" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\PresolveWorkingSet.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="12" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\RemoveDependentEq_.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="13" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\RemoveDependentEq_.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="14" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\abs.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="15" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\abs.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="16" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\addAeqConstr.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="17" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\addAeqConstr.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="18" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\addBoundToActiveSetMatrix_.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="19" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\addBoundToActiveSetMatrix_.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="20" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\all.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="21" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\all.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="22" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\atan.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="23" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\atan.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="24" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\bsearch.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="25" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\bsearch.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="26" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\cat.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="27" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\cat.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="28" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\checkStoppingAndUpdateFval.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="29" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\checkStoppingAndUpdateFval.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="30" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\coder_filestats.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="31" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\coder_filestats.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="32" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\coder_platform.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="33" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\coder_platform.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="34" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\coder_posix_time.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="35" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\coder_posix_time.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="36" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\combineVectorElements.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="37" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\combineVectorElements.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="38" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\computeComplError.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="39" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\computeComplError.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="40" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\computeConstraints_.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="41" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\computeConstraints_.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="42" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\computeDualFeasError.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="43" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\computeDualFeasError.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="44" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\computeForwardDifferences.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="45" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\computeForwardDifferences.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="46" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\computeFval_ReuseHx.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="47" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\computeFval_ReuseHx.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="48" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\computeGradLag.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="49" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\computeGradLag.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="50" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\computeGrad_StoreHx.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="51" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\computeGrad_StoreHx.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="52" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\computePrimalFeasError.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="53" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\computePrimalFeasError.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="54" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\compute_deltax.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="55" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\compute_deltax.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="56" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\compute_lambda.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="57" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\compute_lambda.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="58" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\countsort.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="59" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\countsort.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="60" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\deleteColMoveEnd.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="61" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\deleteColMoveEnd.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="62" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\directCollocation.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="63" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\directCollocation.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="64" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\driver.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="65" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\driver.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="66" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\driver1.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="67" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\driver1.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="68" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\evalObjAndConstr.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="69" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\evalObjAndConstr.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="70" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\evalObjAndConstrAndDerivatives.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="71" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\evalObjAndConstrAndDerivatives.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="72" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\factorQR.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="73" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\factorQR.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="74" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\factorQRE.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="75" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\factorQRE.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="76" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\factoryConstruct.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="77" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\factoryConstruct.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="78" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\factoryConstruct1.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="79" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\factoryConstruct1.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="80" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\factoryConstruct2.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="81" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\factoryConstruct2.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="82" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\feasibleX0ForWorkingSet.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="83" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\feasibleX0ForWorkingSet.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="84" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\feasibleratiotest.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="85" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\feasibleratiotest.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="86" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\finDiffEvalAndChkErr.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="87" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\finDiffEvalAndChkErr.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="88" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\fmincon.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="89" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\fmincon.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="90" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\fullColLDL2_.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="91" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\fullColLDL2_.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="92" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\histc.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="93" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\histc.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="94" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\initActiveSet.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="95" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\initActiveSet.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="96" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\interp1.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="97" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\interp1.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="98" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\isfile.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="99" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\isfile.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="100" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\iterate.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="101" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\iterate.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="102" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\linearForm_.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="103" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\linearForm_.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="104" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\linesearch.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="105" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\linesearch.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="106" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\linspace.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="107" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\linspace.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="108" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\loadProblem.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="109" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\loadProblem.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="110" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\maxConstraintViolation.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="111" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\maxConstraintViolation.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="112" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\maxConstraintViolation_AMats_regularized_.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="113" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\maxConstraintViolation_AMats_regularized_.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="114" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\minOrMax.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="115" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\minOrMax.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="116" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\modifyOverheadPhaseOne_.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="117" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\modifyOverheadPhaseOne_.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="118" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\normal.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="119" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\normal.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="120" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\optimoptions.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="121" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\optimoptions.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="122" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\partialColLDL3_.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="123" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\partialColLDL3_.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="124" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\phaseone.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="125" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\phaseone.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="126" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\relaxed.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="127" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\relaxed.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="128" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\removeConstr.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="129" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\removeConstr.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="130" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\rocketDynamics.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="131" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\rocketDynamics.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="132" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\rocket_codegen.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="133" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\rocket_codegen.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="134" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\rocket_codegen_data.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="135" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\rocket_codegen_data.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="136" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\rocket_codegen_emxutil.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="137" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\rocket_codegen_emxutil.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="138" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\rocket_codegen_initialize.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="139" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\rocket_codegen_initialize.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="140" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\rocket_codegen_internal_types.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="141" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\rocket_codegen_rtwutil.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="142" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\rocket_codegen_rtwutil.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="143" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\rocket_codegen_terminate.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="144" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\rocket_codegen_terminate.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="145" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\rocket_codegen_types.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="146" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\rtGetInf.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="147" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\rtGetInf.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="148" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\rtGetNaN.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="149" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\rtGetNaN.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="150" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\rt_nonfinite.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="151" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\rt_nonfinite.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="152" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\rtwtypes.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="153" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\setProblemType.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="154" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\setProblemType.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="155" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\soc.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="156" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\soc.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="157" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\solve.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="158" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\solve.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="159" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\sortLambdaQP.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="160" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\sortLambdaQP.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="161" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\squareQ_appendCol.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="162" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\squareQ_appendCol.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="163" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\step.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="164" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\step.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="165" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\strcmp.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="166" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\strcmp.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="167" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\sum.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="168" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\sum.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="169" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\test_exit.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="170" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\test_exit.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="171" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\tic.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="172" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\tic.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="173" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\timeKeeper.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="174" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\timeKeeper.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="175" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\toc.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="176" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\toc.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="177" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\trapezoid.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="178" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\trapezoid.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="179" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\updateWorkingSetForNewQP.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="180" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\updateWorkingSetForNewQP.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="181" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\xgemm.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="182" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\xgemm.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="183" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\xgemv.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="184" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\xgemv.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="185" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\xgeqp3.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="186" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\xgeqp3.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="187" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\xgerc.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="188" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\xgerc.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="189" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\xnrm2.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="190" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\xnrm2.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="191" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\xorgqr.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="192" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\xorgqr.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="193" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\xpotrf.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="194" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\xpotrf.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="195" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\xrotg.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="196" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\xrotg.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="197" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\xzgeqp3.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="198" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\xzgeqp3.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="199" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\xzlarf.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="200" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\xzlarf.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="201" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\xzlarfg.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="202" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\xzlarfg.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="203" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\examples\main.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="204" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\codegen\lib\rocket_codegen\examples\main.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
                 </Artifacts>
                 <BuildFolder type="coderapp.internal.util.mfz.FileSpec"/>
                 <Messages type="coderapp.internal.util.mfz.Message">
                   <FileRange type="coderapp.internal.util.mfz.FileRange">
                     <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\demo\toyCar\toyCar_codegen.m</Path>
+                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\rombergQuadratureGen.m</Path>
                     </File>
                     <Range type="coderapp.internal.util.mfz.Range">
-                      <End>2441</End>
-                      <Start>2424</Start>
+                      <End>2146</End>
+                      <Start>2146</Start>
                     </Range>
                   </FileRange>
-                  <Identifier>Coder:builtins:ErrorLimitReached</Identifier>
-                  <Text>Error limit reached. Suppressing further error messages.</Text>
-                  <Type>ERROR</Type>
+                  <Identifier>Coder:builtins:ForLoopIndexIncompatible</Identifier>
+                  <Text>Index variable k is used outside its corresponding FOR loop. The run-time behavior will differ from MATLAB if the loop is not executed.</Text>
+                  <Type>WARNING</Type>
                 </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\optimTraj.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>6878</End>
-                      <Start>6867</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
-                  <Text>Function call failed.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\optimTraj.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>6952</End>
-                      <Start>6936</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
-                  <Text>Function call failed.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\optimTraj.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>7016</End>
-                      <Start>7005</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
-                  <Text>Function call failed.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\optimTraj.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>7080</End>
-                      <Start>7069</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
-                  <Text>Function call failed.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\optimTraj.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>7146</End>
-                      <Start>7134</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:builtins:ErrorLimitReached</Identifier>
-                  <Text>Error limit reached. Suppressing further error messages.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\trapezoid.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>2820</End>
-                      <Start>2795</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
-                  <Text>Function call failed.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Program Files\MATLAB\R2025b\toolbox\eml\lib\matlab\iofun\fprintf.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>1404</End>
-                      <Start>1362</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:builtins:ErrorLimitReached</Identifier>
-                  <Text>Error limit reached. Suppressing further error messages.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Program Files\MATLAB\R2025b\toolbox\eml\lib\matlab\iofun\fprintf.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>2191</End>
-                      <Start>2086</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:builtins:ErrorLimitReached</Identifier>
-                  <Text>Error limit reached. Suppressing further error messages.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Program Files\MATLAB\R2025b\toolbox\eml\eml\+coder\+internal\print_processing.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>1789</End>
-                      <Start>1718</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:builtins:ErrorLimitReached</Identifier>
-                  <Text>Error limit reached. Suppressing further error messages.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Program Files\MATLAB\R2025b\toolbox\eml\eml\+coder\+internal\validate_print_arguments.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>1594</End>
-                      <Start>1561</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:builtins:ErrorLimitReached</Identifier>
-                  <Text>Error limit reached. Suppressing further error messages.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\directCollocation.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>3557</End>
-                      <Start>3433</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
-                  <Text>Function call failed.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
-                  <Text>Function call failed.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
-                  <Text>Function call failed.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
-                  <Text>Function call failed.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <Identifier>Coder:builtins:IfWhileNonScalar</Identifier>
-                  <Text>Logical operations on nonscalars are not supported for code generation. Use the functions 'any' or 'all' to reduce logical matrices to their scalar equivalents.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\hermiteSimpson.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>2553</End>
-                      <Start>2429</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:toolbox:xprintfFmtTypeMismatchSigned</Identifier>
-                  <Text>An input argument with type 'double' is inconsistent with the conversion character 'd' in the 'formatSpec'. For code generation, the type of this input argument must be 'int8', 'int16', 'int32', or 'int64'.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\hermiteSimpson.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>2553</End>
-                      <Start>2429</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
-                  <Text>Function call failed.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\hermiteSimpson.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>2685</End>
-                      <Start>2674</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:builtins:StructFieldUndefinedLocked</Identifier>
-                  <Text>Invalid structure field 'weights'. Code generation does not support the addition of new fields after a structure has been read or used.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\chebyshev.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>1805</End>
-                      <Start>1763</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:toolbox:xprintfFmtTypeMismatchSigned</Identifier>
-                  <Text>An input argument with type 'double' is inconsistent with the conversion character 'd' in the 'formatSpec'. For code generation, the type of this input argument must be 'int8', 'int16', 'int32', or 'int64'.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\chebyshev.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>1805</End>
-                      <Start>1763</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
-                  <Text>Function call failed.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\chebyshev.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>2028</End>
-                      <Start>2006</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:builtins:ExistFileMode</Identifier>
-                  <Text>Code generation does not support calling exist with 'file' as the search type. Consider using isfile.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\chebyshev.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>2028</End>
-                      <Start>2006</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
-                  <Text>Function call failed.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\chebyshev.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>2079</End>
-                      <Start>2034</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:builtins:UndefinedFunctionOrVariable</Identifier>
-                  <Text>Undefined function or variable chebpts.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\chebyshev.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>2354</End>
-                      <Start>2327</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:builtins:UndefinedFunctionOrVariable</Identifier>
-                  <Text>Undefined function or variable chebpts.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\multiCheb.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>2894</End>
-                      <Start>2854</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
-                  <Text>Function call failed.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\multiCheb.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>12621</End>
-                      <Start>12621</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:builtins:FunctionOutputNotAlwaysAssigned</Identifier>
-                  <Text>Output argument 'w' is undefined on some execution paths. For code generation, all variables must be fully defined before use.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\rungeKutta.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>1736</End>
-                      <Start>1691</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:toolbox:xprintfFmtTypeMismatchSigned</Identifier>
-                  <Text>An input argument with type 'double' is inconsistent with the conversion character 'd' in the 'formatSpec'. For code generation, the type of this input argument must be 'int8', 'int16', 'int32', or 'int64'.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\rungeKutta.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>1736</End>
-                      <Start>1691</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:builtins:FunctionCallFailed</Identifier>
-                  <Text>Function call failed.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Messages type="coderapp.internal.util.mfz.Message">
-                  <FileRange type="coderapp.internal.util.mfz.FileRange">
-                    <File type="coderapp.internal.util.mfz.FileSpec">
-                      <Path>C:\Users\hugob\Documents\Pokibot\OptimTraj\rungeKutta.m</Path>
-                    </File>
-                    <Range type="coderapp.internal.util.mfz.Range">
-                      <End>1788</End>
-                      <Start>1743</Start>
-                    </Range>
-                  </FileRange>
-                  <Identifier>Coder:builtins:ErrorLimitReached</Identifier>
-                  <Text>Error limit reached. Suppressing further error messages.</Text>
-                  <Type>ERROR</Type>
-                </Messages>
-                <Timestamp>2026-01-08T22:39:17</Timestamp>
+                <Success>true</Success>
+                <Timestamp>2026-03-22T18:05:10</Timestamp>
               </MainBuildResult>
             </coderapp.internal.mlc.mfz.MatlabCoderProjectState>
           </MF0>
