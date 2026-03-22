@@ -27,6 +27,9 @@ function [x, err] = rombergQuadratureGen(fun,tSpan,tolIn)
 %   http://www.math.usm.edu/lambers/mat460/fall09/lecture29.pdf
 %
 
+%TODO: Verify this function according to the recursive one. There is no
+%memory of the current recursion.
+
 nMin = 4;   % Complete at least this many iterations
 nMax = 12;  % Maximum iteration count
 nSubSegment = 4;  % Sub-divide segment if max iteration is reached
