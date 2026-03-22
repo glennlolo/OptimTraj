@@ -50,14 +50,14 @@ nColPts = Opt.chebyshev.nColPts;  %Number of grid points for transcription
 % Print out some solver info if desired:
 if Opt.verbose > 0
     disp('  -> Transcription via Chebyshev orthogonal collocation');
-    fprintf('        nColPts = %d \n', nColPts);
+    fprintf('        nColPts = %d \n', int8(nColPts));
     
 end
 
 % Compute the parameters for the ORTHogonal polynomial, in this case the
 % Chebyshev polynomial roots, quadrature weights, interpolation weights,
 % and the differentiation matrix.
-if 2 == exist("chebpts","file")
+if isfile("chebpts")
     [orth.xx, orth.ww, orth.vv] = chebpts(nColPts);
 else
     error('Missing dependency:  chebfun  (http://www.chebfun.org/)  ');

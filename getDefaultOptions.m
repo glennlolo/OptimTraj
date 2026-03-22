@@ -5,6 +5,8 @@ function problemOut = getDefaultOptions(problemIn)
 % It is designed to be called from inside of optimTraj.m, and not by the
 % user.
 %
+coder.varsize("defaultAccuracy")
+defaultAccuracy = 'medium';
 
 problemOut.func = problemIn.func;
 problemOut.bounds = problemIn.bounds;
@@ -17,7 +19,7 @@ nControl = size(problemIn.guess.control,1);
 %%%% Top-level default options:
 OPT.method = 'trapezoid';
 OPT.verbose = 2;
-OPT.defaultAccuracy = 'medium';
+OPT.defaultAccuracy = defaultAccuracy;
 OPT.nlpOpt = optimset(...
                 'Display',"iter",...
                 'TolFun',1e-6,...

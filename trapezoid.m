@@ -72,35 +72,36 @@ problem.func.weights([1,end]) = 0.5;
     problem.func.defectCst = @computeDefects;
 
     %%%% The key line - solve the problem by direct collocation:
-    soln = directCollocation(problem);
+    [soln,tSoln,xSoln,uSoln] = directCollocation(problem);
 
 % Use piecewise linear interpolation for the control
-tSoln = soln.grid.time;
-xSoln = soln.grid.state;
-uSoln = soln.grid.control;
-soln.interp.control = @(t)( interp1(tSoln',uSoln',t')' );
+fControl = @(t)( interp1(tSoln',uSoln',t')' );
+soln.interp.control = fControl;
 
 % Use piecewise quadratic interpolation for the state:
 fSoln = problem.func.dynamics(tSoln,xSoln,uSoln);
-soln.interp.state = @(t)( bSpline2(tSoln,xSoln,fSoln,t) );
+fState = @(t)( bSpline2(tSoln,xSoln,fSoln,t) );
+soln.interp.state = fState;
 
 % Interpolation for checking collocation constraint along trajectory:
 %  collocation constraint = (dynamics) - (derivative of state trajectory)
-soln.interp.collCst = @(t)( ...
-    problem.func.dynamics(t, soln.interp.state(t), soln.interp.control(t))...
+fCollCst = @(t)( ...
+    problem.func.dynamics(t, fState(t), fControl(t))...
     - interp1(tSoln',fSoln',t')' );
+soln.interp.collCst = fCollCst;
 
 % Use multi-segment simpson quadrature to estimate the absolute local error
 % along the trajectory.
-absColErr = @(t)(abs(soln.interp.collCst(t)));
+absColErr = @(t)(abs(fCollCst(t)));
 nSegment = nGrid-1;
 nState = size(xSoln,1);
 quadTol = 1e-12;   %Compute quadrature to this tolerance  
-soln.info.error = zeros(nState,nSegment);
+errors = zeros(nState,nSegment);
 for i=1:nSegment
-    soln.info.error(:,i) = rombergQuadrature(absColErr,tSoln([i,i+1]),quadTol);
+    errors(:,i) = rombergQuadratureGen(absColErr,tSoln([i,i+1]),quadTol);
 end
-soln.info.maxError = max(max(soln.info.error));
+soln.info.error = errors;
+soln.info.maxError = max(max(errors));
 
 end
 

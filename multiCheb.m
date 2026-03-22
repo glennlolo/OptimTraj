@@ -454,6 +454,7 @@ if n == 1, x = 0; return, end % Special case
 %Compute the chebyshev points on the domain [-1,1]:
 m = n-1;
 x = sin(pi*(-m:2:m)/(2*m));       % Chebyshev points
+w = zeros(1,0);
 
 %Rescale (if necessary):
 if nargin~=1

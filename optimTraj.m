@@ -160,7 +160,7 @@ problem = getDefaultOptions(problem); % Complete options struct
 
 % Loop over the options struct to solve the problem
 nIter = length(problem.options);
-soln = repmat(struct('grid',[],'interp',[],'info',[],'problem',[]),1,nIter); 
+soln = cell(1,nIter); 
 P = problem;  %Temp variable for passing on each iteration
 for iter=1:nIter
     P.options = problem.options(iter);
@@ -171,25 +171,24 @@ for iter=1:nIter
     end
     
     if iter > 1  %Use previous soln as new guess
-        P.guess = soln(iter-1).grid;
+        P.guess = soln{iter-1}.grid;
     end
     
     %%%% This is the key part: call the underlying transcription method:
-    switch P.options.method
-        case 'trapezoid'
-            soln(iter) = trapezoid(P);
-        case 'hermiteSimpson'
-            soln(iter) = hermiteSimpson(P);
-        case 'chebyshev'
-            soln(iter) = chebyshev(P);
-        case 'multiCheb'
-            soln(iter) = multiCheb(P);
-        case 'rungeKutta'
-            soln(iter) = rungeKutta(P);
-        case 'gpops'
-            soln(iter) = gpopsWrapper(P);
-        otherwise
-            error('Invalid method. Type: ''help optimTraj'' for a valid list.');
+    if strcmp(P.options.method,'trapezoid')
+        soln{iter} = trapezoid(P);
+    elseif strcmp(P.options.method,'hermiteSimpson')
+        soln{iter} = hermiteSimpson(P);
+    % elseif strcmp(P.options.method,'chebyshev')
+    %     soln(iter) = chebyshev(P);
+    % elseif strcmp(P.options.method,'multiCheb')
+    %     soln(iter) = multiCheb(P);
+    elseif strcmp(P.options.method,'rungeKutta')
+        soln{iter} = rungeKutta(P);
+    elseif strcmp(P.options.method,'gpops')
+        soln{iter} = gpopsWrapper(P);
+    else
+        error('Invalid method. Type: ''help optimTraj'' for a valid list.');
     end
     
 end

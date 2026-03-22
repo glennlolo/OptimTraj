@@ -1,4 +1,4 @@
-function soln = directCollocation(problem)
+function [soln,tSoln,xSoln,uSoln] = directCollocation(problem)
 % soln = directCollocation(problem)
 %
 % OptimTraj utility function
@@ -118,9 +118,6 @@ nlpTime = toc;
 soln.grid.time = tSoln;
 soln.grid.state = xSoln;
 soln.grid.control = uSoln;
-
-soln.interp.state = @(t)( interp1(tSoln',xSoln',t','linear',nan)' );
-soln.interp.control = @(t)( interp1(tSoln',uSoln',t','linear',nan)' );
 
 soln.info = output;
 soln.info.nlpTime = nlpTime;

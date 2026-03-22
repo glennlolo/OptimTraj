@@ -8,7 +8,7 @@ waypoint = [3;3.5];
 
 problem.func.dynamics = @(t,x,u)( dynamics(x,u) );
 problem.func.pathObj = @(t,x,u)( objective(x,u) );
-problem.func.pathCst = @(t,x,u)( pathConst(t,x,waypoint) );
+%problem.func.pathCst = @(t,x,u)( pathConst(t,x,waypoint) );
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 %                 Set up bounds on state and control                      %
