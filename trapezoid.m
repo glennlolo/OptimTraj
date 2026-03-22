@@ -98,7 +98,11 @@ nState = size(xSoln,1);
 quadTol = 1e-12;   %Compute quadrature to this tolerance  
 errors = zeros(nState,nSegment);
 for i=1:nSegment
-    errors(:,i) = rombergQuadratureGen(absColErr,tSoln([i,i+1]),quadTol);
+    if coder.target("MATLAB")
+        errors(:,i) = rombergQuadrature(absColErr,tSoln([i,i+1]),quadTol);
+    else
+        errors(:,i) = rombergQuadratureGen(absColErr,tSoln([i,i+1]),quadTol);
+    end
 end
 soln.info.error = errors;
 soln.info.maxError = max(max(errors));
