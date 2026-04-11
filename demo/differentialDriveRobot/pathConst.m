@@ -20,8 +20,10 @@ Cpa = [];
 [~,idx]=min(abs(t-waypoint(:,1)),[],2);
 Cpb = zeros([2 length(t)]);
 if ~isempty(idx)
-    Cpb(1,idx) = x(idx)-waypoint(:,1);
-    Cpb(2,idx) = y(idx)-waypoint(:,2);
+    for i = 1:length(idx)
+        Cpb(1,idx(i)) = x(idx(i))-waypoint(i,2);
+        Cpb(2,idx(i)) = y(idx(i))-waypoint(i,3);
+    end
 end
 
 end
